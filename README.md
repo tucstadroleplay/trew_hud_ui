@@ -1,3 +1,5 @@
+# NIET DOWNLOADEN IS NOG NIET KLAAR / DON'T DOWNLOAD IS NOT READY AND FINISHED YET!
+
 # Tuc HUD UI
 
 User Interface created originally for ESX (and then adapted for VRP/VRPEX).
