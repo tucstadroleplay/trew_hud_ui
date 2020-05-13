@@ -6,11 +6,6 @@ User Interface created originally for ESX (and then adapted for VRP/VRPEX).
 
 Sinds de vorige developer ermee gestopt is, hebben we dit project overgenomen en zullen we deze in de aankomende weken verbeteren en updaten.
 
-## DEMO
-[![TUC HUD UI DEMO](https://i.imgur.com/DyaZ6Jl.png)](https://youtu.be/u1QTJ5aHcGA)
-
-
-
 ## Installation
 
 1.  Extract the .zip or Open the .zip.
