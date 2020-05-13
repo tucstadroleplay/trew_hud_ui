@@ -1,23 +1,21 @@
-# Trew HUD UI
+# Tuc HUD UI
 
-User Interface created originally for ESX and then adapted for VRP/VRPEX.
+User Interface created originally for ESX (and then adapted for VRP/VRPEX).
 
-# PROJECT DISCONTINUED
+# PROJECT CONTINUE
 
-It was nice to play GTA5 RP and learn LUA in order to code the Trew HUD UI, but after so many struggles with not only the FiveM community and with the thing itself, I decided that I will no longer improve this project. It's been 6 months since the last time I played GTA5 RP and it makes no sense to continue this.
+Sinds de vorige developer ermee gestopt is, hebben we dit project overgenomen en zullen we deze in de aankomende weken verbeteren en updaten.
 
-If you want to fork this project or send pull request, feel free to do it. It has been a nice ride. :) BALLAS FOREVER!
-
-## Demo - click on the image below.
-[![TREW HUD UI DEMO](https://i.imgur.com/DyaZ6Jl.png)](https://youtu.be/u1QTJ5aHcGA)
+## DEMO
+[![TUC HUD UI DEMO](https://i.imgur.com/DyaZ6Jl.png)](https://youtu.be/u1QTJ5aHcGA)
 
 
 
 ## Installation
 
 1.  Extract the .zip or Open the .zip.
-2.  Place `trew_hud_ui` in your resources directory.
-3.  Add `start trew_hud_ui` to your server.cfg
+2.  Place `tuc_hud_ui` in your resources directory.
+3.  Add `start tuc_hud_ui` to your server.cfg
 
 
 
@@ -34,7 +32,7 @@ If you want to fork this project or send pull request, feel free to do it. It ha
 
 -   [esx_basicneeds](https://github.com/ESX-Org/esx_basicneeds)
 -   [esx_status](https://github.com/ESX-Org/esx_status)
--   [LegacyFuel](https://github.com/InZidiuZ/LegacyFuel) (it should be started **BEFORE** the trew\_hud\_ui)
+-   [LegacyFuel](https://github.com/InZidiuZ/LegacyFuel) (it should be started **BEFORE** the tuc\_hud\_ui)
 
 
 ### What you can disable
@@ -163,14 +161,14 @@ Display or hide elements of the HUD
 
 ## Adding Custom Status - click on the image below.
 
-[![TREW HUD UI STATUS CREATION](https://i.imgur.com/O1Cuz4I.png)](https://streamable.com/kzns5)
+[![TUC HUD UI STATUS CREATION](https://i.imgur.com/O1Cuz4I.png)](https://streamable.com/kzns5)
 **Check by the thirst indicator**
 
-You can create custom indicators for status you already have, like stress status, drunken, shit, piss, you name it! You would just have to use the new **exports** functions. I would recommend you create a new script with the code and load it below **trew\_hud\_ui** on your server.cfg.
+You can create custom indicators for status you already have, like stress status, drunken, shit, piss, you name it! You would just have to use the new **exports** functions. I would recommend you create a new script with the code and load it below **tuc_hud\_ui** on your server.cfg.
 
   
 
-**exports.trew\_hud\_ui.createStatus**  
+**exports.tuc\_hud\_ui.createStatus**  
 Creates a new indicator after the existing ones.
 
 **Example:**
@@ -180,7 +178,7 @@ Creates a new indicator after the existing ones.
 	AddEventHandler('playerSpawned', function()
 		
 		if STRESS_ACTIVE == false then
-			exports.trew_hud_ui:createStatus({
+			exports.tuc_hud_ui:createStatus({
 			    status = 'stress',
 			    color = '#FF0090',
 			    icon = '<i class="fas fa-brain"></i>'
@@ -199,7 +197,7 @@ Creates a new indicator after the existing ones.
 
   
 
-**exports.trew\_hud\_ui.setStatus**  
+**exports.tuc\_hud\_ui.setStatus**  
 It is what makes the status update. It should be set on a Wait() timer to update on whenever your custom status is. The example below ticks while getting from a custom status registered on **esx_status**.
 
 **Example:**
@@ -214,7 +212,7 @@ It is what makes the status update. It should be set on a Wait() timer to update
 			    STRESS_STATUS = status.getPercent()
 			end)
 	
-			exports.trew_hud_ui:setStatus({
+			exports.tuc_hud_ui:setStatus({
 			    name = 'stress',
 			    value = STRESS_STATUS
 			});
@@ -233,9 +231,3 @@ It is what makes the status update. It should be set on a Wait() timer to update
 Enables/Disables HUD information elements, like _and job all types money_. Useful for streamers.
 
 _**Usage example:**_ /toggleui
-
-## Donate
-
-This HUD is the product of 4 months of work, craft and creativity. While now I'm giving it for free, if you want to help, consider donating any ammount you want to. It will be really appreciated. :)
-
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=S735RJA49KSJ8&currency_code=USD&source=url)
